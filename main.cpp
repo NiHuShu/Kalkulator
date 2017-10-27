@@ -1,88 +1,62 @@
 #include <iostream>
 
 using namespace std;
+long long liczba_1;
+long long liczba_2;
+int menu()
+{
+    cout << "1.Dodawanie\n";
+    cout << "2.Odejmowanie\n";
+    cout << "3.Mnozenie\n";
+    cout << "4.Dzielenie\n";
+    cout << "Wybierz rodzaj dzia³ania(1-4): ";
+    char opcja;
+    cin >> opcja;
+    switch(opcja)
+    {
+        case '1':
+        cout << "Wybrales dodawanie\n";
+        cout << "Podaj pierwsza liczbe: ";
+        cin >> liczba_1;
+        cout << "Podaj druga liczbe: ";
+        cin >> liczba_2;
+        cout << "Wynik to: " << liczba_1 + liczba_2 << endl;
+        break;
+        case '2':
+        cout << "Wybrales odejmowanie\n";
+        cout << "Podaj pierwsza liczbe: ";
+        cin >> liczba_1;
+        cout << "Podaj druga liczbe: ";
+        cin >> liczba_2;
+        cout << "Wynik to: " << liczba_1 - liczba_2 << endl;
+        break;
+        case '3':
+        cout << "Wybrales mnozenie\n";
+        cout << "Podaj pierwsza liczbe: ";
+        cin >> liczba_1;
+        cout << "Podaj druga liczbe: ";
+        cin >> liczba_2;
+        cout << "Wynik to: " << liczba_1 * liczba_2 << endl;
+        break;
+        case '4':
+        cout << "Wybrales dzielenie\n";
+        cout << "Podaj pierwsza liczbe: ";
+        cin >> liczba_1;
+        cout << "Podaj druga liczbe: ";
+        cin >> liczba_2;
+        cout << "Wynik to: " << liczba_1 / liczba_2 << endl;
+        break;
+        default:
+        cout << "Nie ma takiej opcji\n";
+        menu();
+        break;
+    }
+}
 
 int main()
 {
-   std::cout << "kalkulator by NiHuShu" << std::endl;
-   std::cout << "Wpisz pierwsz¹ liczbê" << std::endl;
-   int first;
-   std::cin >> first;
-   std::cout << "Wpisz drug¹ liczbê" << std::endl;
-   int second;
-   std::cin >> second;
-   std::cout << "Wybierz rodzaj dzia³ania" << std::endl;
-   std::cout << "1.Dodawanie" << std::endl;
-   std::cout << "2.Odejmowanie" << std::endl;
-   std::cout << "3.Mno¿enie" << std::endl;
-   std::cout << "4.Dzielenie" << std::endl;
-   int type;
-   std::cin >> type;
-   int wynik;
-   if (type == 1) {
-    wynik = first + second;
-    std::cout << "Wynik to: " << wynik << std::endl;
-   }
-    else if (type == 2){
-     wynik = first - second;
-     std::cout << "Wynik to: " << wynik << std::endl;
-}
-    else if (type == 3) {
-        wynik = first * second;
-        std::cout << "Wynik to: " << wynik << std::endl;
-    }
-    else if (type == 4) {
-        wynik = first / second;
+    cout << "Kalkulator by NiHuShu :D\n";
+    menu();
 
-        std::cout << "Wynik to: " << wynik << std::endl;
-    }
-    else {
-        std::cout <<"nie ma takiego dzia³ani";
-}
-   std::cin >> second;
-   std::cout << "Co dalej?" << std::endl;
-   std::cout << "1.Zresetuj program" << std::endl;
-   std::cout << "2.Wykonaj ponownie obliczenie na tych samych liczbach" << std::endl;
-   std::cout << "3.WyjdŸ z programu" << std::endl;
-   int next;
-   std::cin >> next;
-   if (next == 1){
-    std::cout << "Sorry jeszcze tego nie zaprogramowa³em :D" << std::endl;
-   }
-   else if (next == 2){
-       std::cout << "Wybierz rodzaj dzia³ania" << std::endl;
-   std::cout << "1.Dodawanie" << std::endl;
-   std::cout << "2.Odejmowanie" << std::endl;
-   std::cout << "3.Mno¿enie" << std::endl;
-   std::cout << "4.Dzielenie" << std::endl;
-   int type;
-   std::cin >> type;
-   int wynik;
-   if (type == 1) {
-    wynik = first + second;
-    std::cout << "Wynik to: " << wynik << std::endl;
-   }
-    else if (type == 2){
-     wynik = first - second;
-     std::cout << "Wynik to: " << wynik << std::endl;
-}
-    else if (type == 3) {
-        wynik = first * second;
-        std::cout << "Wynik to: " << wynik << std::endl;
-    }
-    else if (type == 4) {
-        wynik = first / second;
-
-        std::cout << "Wynik to: " << wynik << std::endl;
-    }
-    else {
-        std::cout <<"nie ma takiego dzia³ani";
-}
-   }
-   else if (next == 3){
-    return  0;
-   }
-
-
-
+    return 0;
 }
